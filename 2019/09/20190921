@@ -1,0 +1,54 @@
+20190921
+
+关于AOP错误的是？
+AOP已经表现出将要替代面向对象的趋势
+
+AOP将散落在系统中的“方面”代码集中实现
+AOP有助于提高系统可维护性
+AOP是一种设计模式，Spring提供了一种实现
+
+AOP 和 OOP的区别：
+1. 面向方面编程 AOP 偏重业务处理过程的某个步骤或阶段，强调降低模块之间的耦合度，使代码拥有更好的移植性。
+2. 面向对象编程 (oop) 则是对业务分析中抽取的实体进行方法和属性的封装。
+也可以说 AOP 是面向业务中的动词领域， OOP 面向名词领域。
+AOP 的一个很重要的特点是源代码无关性，也就是说如果我们的系统中引用了 AOP 组件，即使我们把该组件去掉，系统代码也应该能够编译通过。要实现这一点，可以使用动态 proxy 模式。
+
+关于数据库连接的程序，以下哪个语句的注释是错误的（ ）
+db.executeUpdate(sql); //用于返回查询结果
+
+executeUpdate(sql)
+用于执行给定 SQL 语句，该语句可能为 INSERT、UPDATE 或 DELETE 语句，或者不返回任何内容的 SQL 语句。
+返回值是更新的条数。
+executeQuery（sql）
+这个方法被用来执行 SELECT 语句，返回代表查询结果的ResultSet对象。
+
+一般用()创建InputStream对象,表示从标准输入中获取数据,用()创建OutputStream对象，表示输出到标准输出设备中。
+System.in System.out
+
+记好打印到控制台用System.out.println()，这题就永远不会错
+
+JAVA语言的下面几种数组复制方法中，哪个效率最高？
+System.arraycopy
+
+下面说法正确的是？（）
+一个线程调用yield方法，可以使具有相同优先级线程获得处理器
+在Java中，高优先级的可运行的线程会抢占低优先级线程的资源
+
+对于线程局部存储TLS(thread local storage)，以下表述正确的是
+解决多线程中的对同一变量的访问冲突的一种技术
+TLS会为每一个线程维护一个和该线程绑定的变量的副本
+Java平台的java.lang.ThreadLocal是TLS技术的一种实现
+
+
+JavaWEB中有一个类，当会话种邦定了属性或者删除了属性时，他会得到通知，这个类是：(    )
+HttpSessionAttributeListener
+
+HttpSessionAttributeListener：可以实现此侦听器接口获取此web应用程序中会话属性列表更改的通知；
+HttpSessionBindingListener：当该对象从一个会话中被绑定或者解绑时通知该对象，这个对象由HttpSessionBindingEvent对象通知。这可能是servlet程序显式地从会话中解绑定属性的结果，可能是由于会话无效，也可能是由于会话超时；
+HttpSessionObjectListener：没有该接口API；
+HttpSessionListener：当web应用程序中的活动会话列表发生更改时通知该接口的实现类，为了接收该通知事件，必须在web应用程序的部署描述符中配置实现类；
+HttpSessionActivationListener：绑定到会话的对象可以侦听容器事件，通知它们会话将被钝化，会话将被激活。需要一个在虚拟机之间迁移会话或持久会话的容器来通知所有绑定到实现该接口会话的属性。
+
+有关线程的叙述正确的是()
+线程通过使用synchronized关键字可获得对象的互斥锁定
+线程调度算法是平台独立的
