@@ -1,0 +1,80 @@
+20190922
+
+为AB类的一个无形式参数无返回值的方法method书写方法头，使得使用类名AB作为前缀就可以调用它，该方法头的形式为(      )。
+static  void  method( )
+
+When is the text “Hi there”displayed?
+public class StaticTest
+{
+    static
+    {
+        System.out.println(“Hi there”);
+    }
+ 
+    public void print()
+    {
+        System.out.println(“Hello”);
+    }
+ 
+    public static void main(String args[])
+    {
+        StaticTest st1 = new StaticTest();
+        st1.print();
+        StaticTest st2 = new StaticTest();
+        st2.print();
+    }
+}
+Once when the class is loaded into the Java virtual machine.
+(static方法在类被读入JVM虚拟机时调用一次)
+
+已知如下类说明：
+
+1
+2
+3
+4
+5
+6
+7
+8
+public class Test{
+    private float f=1.0f;
+    int m=12;
+    static int n=1;
+    public static void main(String args[]){
+        Test t=new Test();
+    }
+}
+如下哪些使用是正确的（）
+Test.n
+
+Java表达式"13 & 17"的结果是什么?（）
+1
+&,位与,先转二进制再位与
+
+在java7中，下列不能做switch()的参数类型是？
+浮点型
+switch语句后的控制表达式只能是short、char、int、long整数类型和枚举类型，不能是float，double和boolean类型。String类型是java7开始支持。
+
+关于匿名内部类叙述正确的是？ ( )
+匿名内部类不可以定义构造器
+
+在 myjsp.jsp 中，关于下面的代码说法错误的是： (  )   
+<%@ page language="java" import="java.util.*" errorPage="error.jsp" isErrorPage="false" %> 
+该页面可以使用 exception 对象
+errorPage就是发生错误之后跳去的地方,错误页不是非得写自己是错误页
+
+开闭原则相关的面向对象设计原则（）
+里氏代换原则(Liskov Substitution Principle LSP)
+依赖倒转原则（Dependence Inversion Principle）
+
+单一职责原则：应该有且仅有一个原因引起类的变更(一个接口或一个类只有一个原则，它就只负责一件事)
+里式替换原则：子类型必须能替换掉它们的基类型
+依赖倒置原则：
+    高层模块不应该依赖低层模块，两者都应该依赖其抽象
+    抽象不应该依赖细节
+    细节应该依赖抽象
+接口隔离原则：
+    客户端不应该依赖它不需要的接口
+    类间的依赖关系应该建立在最小的接口上
+迪米特法则：只与直接朋友进行通信
