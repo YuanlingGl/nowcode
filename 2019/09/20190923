@@ -1,0 +1,41 @@
+20190923
+
+要使对象具有序列化能力，则其类应该实现如下哪个接口()。
+java.io.Serializable
+
+Serializable接口是专门提供给类实现序列化用的；
+Cloneable 接口是用来实现克隆方法的。Object.clone() 方法可以合法地对该类实例进行按字段复制；
+实现CharSequence接口的类有：CharBuffer、String、StringBuffer、StringBuilder四个类，这样当处理String或者StringBuffer的类就不用重载了；
+Comparable接口用于对实现它的每个类的对象进行整体排序。
+
+Java 中的集合类包括 ArrayList 、 LinkedList 、 HashMap 等，下列关于集合类描述错误的是？
+随机添加和删除元素时，ArrayList的表现更加快速
+
+ArrayList和LinkedList都是List的子接口，A正确；ArrayList由数组实现，LinkedList由链表实现，数组的访问速度比链表快，B正确；随机添加删除元素时，链表的效率要高于数组，C错误；HashMap允许将null用作键或值，D正确
+
+transient 变量和下面哪一项有关？   
+Serializable
+
+和序列化有关，这是一个空接口，起标记作用，具体的序列化由ObjectOutputStream和ObjectInputStream完成。transient修饰的变量不能被序列化，static变量不管加没加transient都不可以被序列化
+
+（）运算符把其操作数中所有值为0和所有值为1的位分别在结果的相应中设置1和0
+~
+
+~是位运算符，意义是 按位非（NOT）
+按位非也叫做补，一元运算符NOT“~”是对其运算数的每一位取反。
+仅用于整数值
+反转位，即0位变为1位，1变成0
+在所有情况下~x等于（-x）- 1
+例如
+  ~ 0111 (7) = 1000 (8)
+  
+下面哪个行为被打断不会导致InterruptedException：（ ）？
+Thread.suspend
+
+以下JSP代码定义了一个变量，如何输出这个变量的值？
+<bean:define id="stringBean" value="helloWorld"/>
+<%=stringBean%>
+<bean:write name="stringBean"/>
+<%String myBean=(String)pageContext.getAttribute("stringBean",PageContext.PAGE_SCOPE);%>
+<%=myBean%>
+
