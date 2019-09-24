@@ -1,0 +1,34 @@
+可将语句块或方法设为同步使用的语句是（）
+synchronized
+
+如果要建立一个java.com.computer的包放入当前java类，下列叙述正确的是？  ( )
+只需在代码中第一条非注释性语句加入“package java.com.computer;”
+
+关键字super的作用是？
+用来访问父类被隐藏的非私有成员变量
+用来调用父类中被重写的方法
+用来调用父类的构造函数
+
+/*..................*/中可以嵌套//注释，也能嵌套/*..........*/注释。
+错误
+
+有如下一段代码，请选择其运行结果（）
+public class StringDemo{
+  private static final String MESSAGE="taobao";
+  public static void main(String [] args) {
+    String a ="tao"+"bao";
+    String b="tao";
+    String c="bao";
+    System.out.println(a==MESSAGE);
+    System.out.println((b+c)==MESSAGE);
+  }
+}
+true false
+//这里我瞎了没看到上面的MESSAGE还纳闷半天
+
+下面有关java hashmap的说法错误的是？
+HashMap通过开放地址法解决哈希冲突
+
+Java中用正则表达式截取字符串中第一个出现的英文左括号之前的字符串。比如：北京市（海淀区）（朝阳区）（西城区），截取结果为：北京市。正则表达式为（）
+".*?(?=\\()"
+
