@@ -1,0 +1,99 @@
+以下不是修饰符final的作用的是( )。
+修饰不可变类
+final的作用：
+    1. 修饰变量，变量的引用地址不可变，但是地址中的内容可以变。
+    2. 修饰方法，方法不可被重写，但是还是可以重载
+    3. 修饰类，类不可继承。
+不可变类，说的是一个类一旦被实例化，就不可改变自身的状态。常见的比如String和基本数据类型的包装类，对于这种不可变类，一旦在进行引用传递的时候，形参一开始就和实际参数指向的不是一个地址，所以在方法中对形参的改变，并不会影响实际参数。 
+
+下面哪种流可以用于字符输入：
+java.io.inputStreamReader
+字符输入流意味着含有input和 reader，stream是字节流的。 
+
+J2EE中，当把来自客户机的HTTP请求委托给servlet时，会调用HttpServlet的（    ）方法
+service
+HttpServlet容器响应Web客户请求流程如下：
+1）Web客户向Servlet容器发出Http请求;
+2）Servlet容器解析Web客户的Http请求;
+3）Servlet容器创建一个HttpRequest对象，在这个对象中封装Http请求信息;
+4）Servlet容器创建一个HttpResponse对象;
+5）Servlet容器调用HttpServlet的service方法，这个方法中会根据request的Method来判断具体是执行doGet还是doPost，把HttpRequest和HttpResponse对象作为service方法的参数传给HttpServlet对象;
+6）HttpServlet调用HttpRequest的有关方法，获取HTTP请求信息;
+7）HttpServlet调用HttpResponse的有关方法，生成响应数据;
+8）Servlet容器把HttpServlet的响应结果传给Web客户。
+
+下列哪个选项是Java调试器？如果编译器返回程序代码的错误，可以用它对程序进行调试。
+jdb.exe
+
+以下JAVA程序代码的输出是
+public static void main(String args[]) {
+System.out.println(14^3);
+}
+13
+^表示异或 就是相同是0 不同是1
+
+下列可作为java语言修饰符的是（）
+a1
+$1
+_1
+java中标识符的组成：由52个字母A-Z ，a-z ，数字0-9 ，下划线_ ， 美元符$ 组成 
+--------------------
+ 类Parent和Child定义如下：
+
+1 ．class  Parent{
+2.         public  float  aFun(float a, float b) { }
+3 ．}
+4 ．class  Child  extends  Parent{
+5 ．
+6 ．}
+将以下哪种方法插入行5是不合法的。（    ） 
+float aFun(float  a,  float  b){ }
+
+ 两同:方法名、形参列表相同;
+两小:返回值类型、抛出异常更小，这里的“小”指的是继承关系的子父类，不是像高赞所谓的float和int的大小之分;
+一大:访问修饰符。 
+
+在一个基于分布式的游戏服务器系统中，不同的服务器之间，哪种通信方式是不可行的（）？ 
+管道
+
+ 管道( pipe )：管道是一种半双工的通信方式，数据只能单向流动，而且只能在具有亲缘关系的进程间使用。进程的亲缘关系通常是指父子进程关系。
+既然是不同的服务器之间进行通信，怎么可能会是具有亲缘关系的进程呢？ 
+
+下列关于管道（Pipe）通信的叙述中，正确的是（）？ 
+进程对管道进行读操作和写操作都可能被阻塞
+
+ 设有下面两个赋值语句：
+
+a = Integer.parseInt("1024");
+
+b = Integer.valueOf("1024").intValue();
+下述说法正确的是（）
+a和b都是整数类型变量并且它们的值相等。
+
+IntValue()是把Integer对象类型变成int的基础数据类型;
+parseInt()是把String 变成int的基础数据类型;
+Valueof()是把String 转化成Integer对象类型;
+
+以下哪些继承自 Collection 接口（） 
+List
+Set
+
+Collection
+
+├List
+│├LinkedList
+│├ArrayList
+│└Vector
+│　└Stack
+└Set
+Map
+├Hashtable
+├HashMap
+└WeakHashMap 
+
+下面有关 java 类加载器,说法正确的是?()
+引导类加载器(bootstrap class loader):它用来加载 Java 的核心库,是用原生代码来实现的
+扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。
+系统类加载器(system class loader):它根据 Java 应用的类路径(CLASSPATH)来加载 Java 类
+tomcat 为每个 App 创建一个 Loader,里面保存着此 WebApp 的 ClassLoader。需要加载 WebApp 下的类时,就取出 ClassLoader 来使用
+
