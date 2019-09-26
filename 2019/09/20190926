@@ -1,0 +1,78 @@
+BufferedReader的父类是以下哪个？
+Reader
+
+在开发中使用泛型取代非泛型的数据类型（比如用ArrayList<String>取代ArrayList），程序的运行时性能会变得更好。（错误） 
+泛型仅仅是java的语法糖，它不会影响java虚拟机生成的汇编代码，在编译阶段，虚拟机就会把泛型的类型擦除，还原成没有泛型的代码，顶多编译速度稍微慢一些，执行速度是完全没有什么区别的.
+
+如果在一个线程构造了一个不可变对象之后（对象仅包含final字段），就可以保证了这个对象被其他线程正确的查看(错误)
+final只是指向不变，但是指向的值有可能变，所以依然不是线程安全 
+
+有以下程序段， 则下面正确的选项是（） 
+public class MyThead extends Thread{
+    public static void main(String[] args) {
+        MyThead t=new MyThead();
+        MyThead s=new MyThead();
+        t.start();
+        System.out.println("one.");
+        s.start();
+        System.out.println("two.");
+    }
+    public void run() {
+        System.out.println("Thread");
+    }
+}
+
+程序运行可能结果为：
+one.
+Thread
+two.
+Thread
+程序运行可能结果是：
+one.
+two.
+Thread
+Thread
+程序运行结果不稳定
+
+在java中重写方法应遵循规则的包括（）
+可以有不同的访问修饰符
+参数列表必须完全与被重写的方法相同
+
+这道题目想考察的知识点是MySQL组合索引（复合索引）的最左优先原则。最左优先就是说组合索引的第一个字段必须出现在查询组句中，这个索引才会被用到。只要组合索引最左边第一个字段出现在Where中，那么不管后面的字段出现与否或者出现顺序如何，MySQL引擎都会自动调用索引来优化查询效率。
+根据最左匹配原则可以知道B-Tree建立索引的过程，比如假设有一个3列索引(col1,col2,col3),那么MySQL只会会建立三个索引(col1),(col1,col2),(col1,col2,col3)。
+所以题目会创建三个索引（plat_order_id）、（plat_order_id与plat_game_id的组合索引）、（plat_order_id、plat_game_id与plat_id的组合索引）。根据最左匹配原则，where语句必须要有plat_order_id才能调用索引（如果没有plat_order_id字段那么一个索引也调用不到），如果同时出现plat_order_id与plat_game_id则会调用两者的组合索引，如果同时出现三者则调用三者的组合索引。
+题目问有哪些sql能使用到索引，个人认为只要Where后出现了plat_order_id字段的SQL语句都会调用到索引，只不过是所调用的索引不同而已，所以选BCDE。如果题目说清楚是调用到三个字段的复合索引，那答案才是BD。 
+
+--------------------
+
+类Person里面有个方法sleep()，如果直接用Person.sleep()，则方法sleep前面必须用的关键词是？  (    )
+static
+
+以下哪项可能包含菜单条（ ）Frame
+
+以下哪一个不是赋值符号？
+<<<=
+A.很明显是赋值符号
+B.<<=左移赋值
+C.不是
+D.>>>= 右移赋值，左边空出的位以0填充
+
+多态的作用（）
+隐藏细节
+提高可重用性
+扩展代码模块
+
+ 多态的作用 
+1不必编写每一子类的功能调用，可以直接把不同子类当父类看，屏蔽子类间的差异，提高代码的通用率/复用率 
+2父类引用可以调用不同子类的功能，提高了代码的扩充性和可维护性 
+
+下列哪些方法是针对循环优化进行的
+
+强度削弱
+删除归纳变量
+代码外提
+
+常见的代码优化技术有：复写传播，删除死代码, 强度削弱，归纳变量删除
+
+--------------------
+
