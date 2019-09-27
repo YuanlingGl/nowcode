@@ -1,0 +1,111 @@
+20190927
+
+String str =
+"";
+System.out.print(str.split(",").length);
+输出结果为：
+1
+
+String split 这个方法默认返回一个数组，  * 如果没有找到分隔符，  * 会把整个字符串当成一个长度为1的字符串数组  * 返回到结果， 所以此处结果就是1  */
+
+关于volatile关键字，下列描述不正确的是？
+对volatile变量的操作是原子性的。
+不依赖其他锁机制，多线程环境下的计数器可用volatile实现。
+
+一旦一个共享变量（类的成员变量、类的静态成员变量）被volatile修饰之后，那么就具备了两层语义：
+1）保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量的值，这新值对其他线程来说是立即可见的。
+2）禁止进行指令重排序。
+volatile只提供了保证访问该变量时，每次都是从内存中读取最新值，并不会使用寄存器缓存该值——每次都会从内存中读取。
+而对该变量的修改，volatile并不提供原子性的保证。
+由于及时更新，很可能导致另一线程访问最新变量值，无法跳出循环的情况
+多线程下计数器必须使用锁保护。 
+
+public class NameList
+{
+    private List names = new ArrayList();
+    public synchronized void add(String name)
+    {
+        names.add(name);
+    }
+    public synchronized void printAll()     {
+        for (int i = 0; i < names.size(); i++)
+        {
+            System.out.print(names.get(i) + ””);
+        }
+    }
+ 
+    public static void main(String[]args)
+    {
+        final NameList sl = new NameList();
+        for (int i = 0; i < 2; i++)
+        {
+            new Thread()
+            {
+                public void run()
+                {
+                    sl.add(“A”);
+                    sl.add(“B”);
+                    sl.add(“C”);
+                    sl.printAll();
+                }
+            } .start();
+        }
+    }
+}
+Which two statements are true if this class is compiled and run? 
+
+The code may rum with output “A B C A B C A B C “, then exit.
+The code may ruin with output “A B C A A B C A B C “, then exit.
+//这题不是不会,就是看的头疼
+在每个线程中都是顺序执行的，所以sl.printAll();必须在前三句执行之后执行，也就是输出的内容必有（连续或非连续的）ABC。
+而线程之间是穿插执行的，所以一个线程执行 sl.printAll();之前可能有另一个线程执行了前三句的前几句。
+E答案相当于线程1顺序执行完然后线程2顺序执行完。
+G答案则是线程1执行完前三句add之后线程2插一脚执行了一句add然后线程1再执行 sl.printAll();输出ABCA。接着线程2顺序执行完输出ABCABC 
+
+--------------------
+
+\d      匹配一个数字字符。等价于 [0-9]。
+\D     匹配一个非数字字符。等价于 [^0-9]。
+\f       匹配一个换页符。等价于 \x0c 和 \cL。
+\n      匹配一个换行符。等价于 \x0a 和 \cJ。
+\r       匹配一个回车符。等价于 \x0d 和 \cM。
+\s      匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。
+\S      匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。
+\t       匹配一个制表符。等价于 \x09 和 \cI。
+\v      匹配一个垂直制表符。等价于 \x0b 和 \cK。
+\w     匹配字母、数字、下划线。等价于'[A-Za-z0-9_]'。
+\W    匹配非字母、数字、下划线。等价于 '[^A-Za-z0-9_]'。 
+
+正则
+
+假如某个JAVA进程的JVM参数配置如下：
+-Xms1G -Xmx2G -Xmn500M -XX:MaxPermSize=64M -XX:+UseConcMarkSweepGC -XX:SurvivorRatio=3,
+请问eden区最终分配的大小是多少？
+300M
+
+java -Xmx2G -Xms1G -Xmn500M -Xss128k
+-Xmx2G：设置JVM最大可用内存为2G。
+-Xms1G：设置JVM促使内存为1G。此值可以设置与-Xmx相同，以避免每次垃圾回收完成后JVM重新分配内存。
+-Xmn500M：设置年轻代大小为2G。整个JVM内存大小=年轻代大小 + 年老代大小 + 持久代大小。
+
+-XX:SurvivorRatio=3:新生代中又会划分为 Eden 区，from Survivor、to Survivor 区。
+其中 Eden 和 Survivor 区的比例默认是 8:1:1，当然也支持参数调整 -XX:SurvivorRatio=3的话就是3:1:1。
+故该题为500*（3/5）=300M. 
+
+如何获取ServletContext设置的参数值？
+context.getInitParameter()
+
+getParameter()是获取POST/GET传递的参数值；
+getInitParameter获取Tomcat的server.xml中设置Context的初始化参数
+getAttribute()是获取对象容器中的数据值；
+getRequestDispatcher是请求转发。 
+
+关于身份证号，以下正确的正则表达式为（      ）
+isIDCard=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+isIDCard=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/;
+
+^：起始符号，^x表示以x开头
+$：结束符号，x$表示以x结尾
+[n-m]：表示从n到m的数字
+\d：表示数字，等同于[0-9]
+X{m}：表示由m个X字符构成，\d{4}表示4位数字
