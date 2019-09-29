@@ -38,3 +38,56 @@ JSON语法可以表示以下三种类型的值:
     类间的依赖关系应该建立在最小的接口上
 迪米特法则：只与直接朋友进行通信
 
+--------------------
+
+下面对spring对bean的生命周期的描述，描述错误的是？
+在spring中，singleton属性默认是false，每次指定别名取得的Bean时都会产生一个新的实例
+Bean的创建时会提到Spring的单例模式，就是说默认情况下Spring中定义的Bean是以单例模式创建的
+
+下面有关spring事务，描述错误的是？
+如果你的应用中存在大量事务操作，那么编程式事务管理通常是值得的
+
+编程式事务：代码中注解实现的事务
+声明式事务：配置文件中配置的事务 
+
+下面关于spring mvc 和struts2的描述，错误的是？
+spring mvc的入口是filter，而struts2是servlet
+反过来
+springmvc-servlet stryts2-filter
+
+下面有关spring依赖注入说法错误的是？
+如果Bean的某一个属性没有注入，ApplicationContext加载后，直至第一次使用调用getBean方法才会抛出异常；而BeanFactory则在初始化自身时检验，这样有利于检查所依赖属性是否注入
+
+ApplicationContext初始化时会检验，而BeanFactory在第一次使用时未注入，才会抛出异常  
+
+以下那个不属于Spring Scope（作用域）的范围（）
+application
+
+
+
+    singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。
+    prototype : 每次请求都会创建一个新的 bean 实例。
+    request : 每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。
+    session : 每一次HTTP请求都会产生一个新的 bean，该bean仅在当前 HTTP session 内有效。
+    global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有不同的会话
+
+下面关于Spring的说法中错误的是（）
+Spring提供了AOP方式的日志系统
+
+Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系统。
+
+以下关于Spring的说法是正确（ ）
+在Spring配置文件中，就可以设置Bean初始化函数和消亡函数
+对象的设计应使类和构件之间的耦合最小
+
+在J2EE中，使用Servlet过滤器，需要在web.xml中配置（）元素
+<filter>
+<filter-mapping>
+Servlet过滤器的配置包括两部分：
+第一部分是过滤器在Web应用中的定义，由<filter>元素表示，包括<filter-name>和<filter-class>两个必需的子元素
+第二部分是过滤器映射的定义，由<filter-mapping>元素表示,可以将一个过滤器映射到一个或者多个Servlet或JSP文件，也可以采用url-pattern将过滤器映射到任意特征的URL。
+
+开闭原则相关的面向对象设计原则（）
+里氏代换原则(Liskov Substitution Principle LSP)
+依赖倒转原则（Dependence Inversion Principle）
+
