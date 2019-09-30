@@ -1,0 +1,70 @@
+以下关于 abstract 关键字的说法，正确的是（） 
+
+abstract 方法必须在abstract类或接口中。
+
+下列程序test 类中的变量c 的最后结果为
+public class Test {
+public static void main(String args[]) {
+int a = 10;
+int b;
+int c;
+if (a > 50) {
+b = 9;
+}
+c = b + a;
+}
+}
+编译出错
+必须要初始化
+
+下面程序的运行结果：()
+public static void main(String args[]) {
+        Thread t=new Thread(){
+        public void  run(){
+            dianping();
+             
+        }
+    };
+    t.run();
+    System.out.print("dazhong");
+    }
+    static void dianping(){
+        System.out.print("dianping");
+}
+
+dianpingdazhong
+
+用start启动的线程才会一直循环输出
+
+使用char* p = new char[100]申请一段内存，然后使用delete p释放，有什么问题（ ）？ 
+不会有内存泄露，但不建议用
+
+java中关于继承的描述正确的是（）
+一个子类只能继承一个父类
+继承具有传递性
+父类一般具有通用性，子类更具体
+
+子类不能继承夫类的构造方法,只能super调用
+
+下面属于JSP内置对象的是？ 
+out对象
+response对象
+application对象
+page对象
+
+1、pageContext 表示页容器 EL表达式、 标签 、上传
+2、request 服务器端取得客户端的信息：头信息 、Cookie 、请求参数 ，最大用处在MVC设计模式上
+3、response 服务器端回应客户端信息：Cookie、重定向
+4、session 表示每一个用户，用于登录验证上
+5、application 表示整个服务器
+6、config 取得初始化参数，初始化参数在web.xml文件中配置
+7、exception 表示的是错误页的处理操作
+8、page 如同this一样，代表整个jsp页面自身
+9、out 输出 ，但是尽量使用表达式输出 
+
+在Java语言中，下列关于字符集编码（Character set encoding）和国际化（i18n）的问题，哪些是正确的？
+
+Java的char类型，通常以UTF-16 Big Endian的方式保存一个字符。
+实现国际化应用常用的手段是利用ResourceBundle类
+
+Java一律采用Unicode编码方式，每个字符无论中文还是英文字符都占用2个字节。 
