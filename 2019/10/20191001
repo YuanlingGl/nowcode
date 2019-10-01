@@ -1,0 +1,26 @@
+基于Servlet API如何实现转向时不在地址栏中显示转向后的地址？
+forward ( )
+forward是转向不会显示新url，redirect是重定向，会显示新的url  
+
+在Servlet里，能实现重定向的方法有
+运用javax.servlet.http.HttpServletResponse接口的sendRedirect方法
+HttpServletResponse.sendRedirect()方法将响应定向到参数location指定的、新的URL。location可以是一个绝对的URL，如 response.sendRedirect("http://java.sun.com")也可以使用相对的URL，是请求转发，前后页面共享一个request  。将导致客户端浏览器的请求URL跳转。从浏览器中的地址栏中可以看到新的URL地址，作用类似于上面设置HTTP响应头信息的实现。 
+RequestDispatcher.forward()方法将当前的request和response重定向到该 RequestDispacher指定的资源。是重新定向，前后页面不是一个request。
+
+关于SpringMVC，以下说法错误的是？（）
+controller默认是单例，通过@Scope(“prototype”)注解改为多例，成员变量共享
+@Scope(“prototype”)表示每获取一个bean创建一个对象。这虽然看起来是多例。但成员变量并不共享。
+要想成员变量共享，可设置为“session”或“globalSession”
+
+在J2EE中，使用Servlet过滤器，需要在web.xml中配置（）元素
+<filter>
+<filter-mapping>
+
+Servlet过滤器的配置包括两部分：
+第一部分是过滤器在Web应用中的定义，由<filter>元素表示，包括<filter-name>和<filter-class>两个必需的子元素
+第二部分是过滤器映射的定义，由<filter-mapping>元素表示,可以将一个过滤器映射到一个或者多个Servlet或JSP文件，也可以采用url-pattern将过滤器映射到任意特征的URL。
+
+
+SpringMVC是Spring中的模块，它实现了mvc设计模式的web框架，首先用户发出请求，请求到达SpringMVC的前端控制器（DispatcherServlet）,前端控制器根据用户的url请求处理器映射器查找匹配该url的handler，并返回一个执行链，前端控制器再请求处理器适配器调用相应的handler进行处理并返回给前端控制器一个modelAndView，前端控制器再请求视图解析器对返回的逻辑视图进行解析，最后前端控制器将返回的视图进行渲染并把数据装入到request域，返回给用户。
+DispatcherServlet作为springMVC的前端控制器，负责接收用户的请求并根据用户的请求返回相应的视图给用户。
+实现业务操作时在service层，所以C答案错误。 
