@@ -1,0 +1,40 @@
+要表示10个学生的成绩，下列声明并初始化数组正确的是（）
+int score[]=new int[10]
+
+命令javac-d参数的用途是？（）
+指定编译后类层次的根目录
+
+sleep和wait的区别有：
+  1，这两个方法来自不同的类分别是Thread和Object
+  2，最主要是sleep方法没有释放锁，而wait方法释放了锁，使得敏感词线程可以使用同步控制块或者方法。
+  3，wait，notify和notifyAll只能在同步控制方法或者同步控制块里面使用，而sleep可以在
+    任何地方使用
+   synchronized(x){
+      x.notify()
+     //或者wait()
+   }
+   4,sleep必须捕获异常，而wait，notify和notifyAll不需要捕获异常 
+
+哪个类可用于处理 Unicode? 
+InputStreamReader
+
+下列关于JAVA多线程的叙述正确的是（）
+CyclicBarrier和CountDownLatch都可以让一组线程等待其他线程
+Callable类的call()方法可以返回值和抛出异常
+
+下面的Java赋值语句哪些是有错误的 （）
+float f = 45.0;
+Double d = 100;
+
+Java接口的修饰符可以为（）
+final
+abstract
+//?不是只能被public和abstract修饰么
+
+Java.Thread的方法resume()负责重新开始被以下哪个方法中断的线程的执行（）。
+suspend
+
+关于java中的数组，下面的一些描述，哪些描述是准确的：（）
+数组是一个对象，不同类型的数组具有不同的类
+数组是一个连续的存储结构
+可以二维数组，且可以有多维数组，都是在java中合法的。
