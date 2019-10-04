@@ -1,0 +1,74 @@
+Java 语言用以下哪个类来把基本类型数据封装为对象（） 
+包装类
+
+要使某个类能被同一个包中的其他类访问，但不能被这个包以外的类访问，可以( )
+让该类不使用任何关键字
+
+ default和protected的区别是：
+前者只要是外部包，就不允许访问。
+后者只要是子类就允许访问，即使子类位于外部包。 
+
+以下程序的输出结果是？
+public class Example {
+    String str = new String("good");
+    char[] ch = { 'a', 'b', 'c' };
+ 
+    public static void main(String args[]) {
+        Example ex = new Example();
+        ex.change(ex.str, ex.ch);
+        System.out.print(ex.str + " and ");
+        System.out.print(ex.ch);
+    }
+ 
+   public static void change(String str, char ch[])      
+   {
+        str = "test ok";
+        ch[0] = 'g';
+    }
+}
+good and gbc
+
+str变值是弄个新对象
+
+下面这段代码，当 T 分别是引用类型和值类型的时候，分别产生了多少个 T 对象（）
+T t = new T();
+Func(t);
+Func 定义如下：
+public void Func(T t) {  }
+
+1,1(我觉得是1,2)
+引用类型作为函数的参数时，复制的是引用的地址，不会产生一个新的T；而如果T是值类型，其作为函数实参时会复制其值，也就是产生了一个新的T。所以D选项正确 
+ 
+以下哪项是错误的（ ）。 
+JPanel中不能包含按钮。
+(swing的东西,暂时用不到,就不细看了)
+
+What is the result of compiling and executing the following fragment of code:
+Boolean flag = false;
+if (flag = true)
+{
+    System.out.println(“true”);
+}
+else
+{
+    System.out.println(“false”);
+}
+The text“true” is displayed.
+//忘了考虑判断条件不写==就直接判断里面的玩意是不是==true了
+
+下列叙述中，错误的是（ ） 
+File类能够读写文件
+
+能够读写文件的是数据流（OutputStream和InputStream） 
+
+如果希望监听TCP端口9000，服务器端应该怎样创建socket?
+new ServerSocket(9000);
+
+String str = new String(“abc”)，“abc”在内存中是怎么分配的？
+堆
+字符串常量区
+
+下列哪个选项是错误的。（） 
+一个文件中只能有一个public class。
+若类中只含一个main方法，则必须是public的。
+//???内部类?
