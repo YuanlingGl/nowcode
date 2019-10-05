@@ -1,0 +1,189 @@
+Java表达式"13 & 17"的结果是什么?（） 
+1
+//这题错三遍了,求求您好好想想
+
+如果一个list初始化为{5，3，1}，执行以下代码后，其结果为（）？
+nums.add(6);
+nums.add(0,4);
+nums.remove(1);
+
+[4, 3, 1, 6]
+nums.add(6);//把6添加到list中，变为｛5,3,1,6｝
+nums.add(0,4);//在list的第0个位置添加4，list变为｛4,5,3,1,6｝
+nums.remove(1);//移除list的第一个元素，list变为｛4,3,1,6｝
+
+try块后必须有catch块。（）
+catch可以省略，try的形式有三种：
+try-catch
+try-finally
+try-catch-finally
+但catch和finally语句不能同时省略！ 
+
+关于Java语言中的final关键字的使用，下列说法正确的是（）
+final关键字可以用来修饰方法，表明此方法不可以被子类重写。
+
+有如下代码：请写出程序的输出结果。
+public class Test
+{
+    public static void main(String[] args)
+    {
+        int x = 0;
+        int y = 0;
+        int k = 0;
+        for (int z = 0; z < 5; z++) {
+            if ((++x > 2) && (++y > 2) && (k++ > 2))
+            {
+                x++;
+                ++y;
+                k++;
+            }
+        }
+        System.out.println(x + ”” +y + ”” +k);
+    }
+}
+531
+
+z=0时候，执行++x > 2，不成立，&&后面就不执行了，此时 x=1，y=0,k=0;
+z=1时候，执行++x > 2，还不成立 ，&&后面就不执行了，此时 x=2，y=0,k=0;
+z=2时候， 执行++x > 2，成立，继续执行 ++y > 2， 不成立  , &&后面就不执行了, 此时 x=3，y=1,k=0;
+z=3时候，执行++x > 2，成立，继续执行++y > 2，不成立  , &&后面就不执行了, 此时 x=4，y=2,k=0;
+z=4 时候，执行++x > 2，成立，继续执行 ++y > 2， 成立  , 继续执行k++>2 ,不成立，此时仍没有进入for循环的语句中， 但此时 x=5，y=3,k=1;
+z=5时候，不满足条件了，整个循环结束，所以最好打印时候： x=5，y=3,k=1;
+
+对于文件的描述正确的是（ ）
+Java中对于文本文件和二进制文件，都可以当作二进制文件进行操作。
+
+以下代码运行输出的是
+public class Person{
+    private String name = "Person";
+    int age=0;
+}
+public class Child extends Person{
+    public String grade;
+    public static void main(String[] args){
+        Person p = new Child();
+        System.out.println(p.name);
+    }
+}
+编译出错
+//编译就错了,轮不到运行
+
+在Java中，HashMap中是用哪些方法来解决哈希冲突的？
+链地址法
+
+下面有关servlet service描述错误的是？
+doGet/doPost 则是在 javax.servlet.GenericServlet 中实现的
+
+doGet/doPost 则是在 javax.servlet.http.HttpServlet 中实现的
+
+关于数据库连接的程序，以下哪个语句的注释是错误的（ ） 
+Class.forName(“sun.jdbc.odbc.JdbcOdbcDriver”); //指定MySQL JDBC驱动程序
+sun.jdbc.odbc.JdbcOdbcDriver//Access数据库
+//求您别玩文字游戏
+
+ public class Demo {
+    public static void main(String[] args) {
+        Collection<?>[] collections = 
+{new HashSet<String>(), new ArrayList<String>(), new HashMap<String, String>().values()};
+                Super subToSuper = new Sub();
+                for(Collection<?> collection: collections) {
+    System.out.println(subToSuper.getType(collection));
+}
+}
+abstract static class Super {
+    public static String getType(Collection<?> collection) {
+        return “Super:collection”;
+}
+public static String getType(List<?> list) {
+        return “Super:list”;
+}
+public String getType(ArrayList<?> list) {
+        return “Super:arrayList”;
+}
+public static String getType(Set<?> set) {
+        return “Super:set”;
+}
+public String getType(HashSet<?> set) {
+        return “Super:hashSet”;
+}
+}
+static class Sub extends Super {
+    public static String getType(Collection<?> collection) {
+            return "Sub"; }
+}
+}
+
+Super:collection
+Super:collection
+Super:collection
+
+这是静态分派的过程，在编译时已经决定了使用super的方法，因为subToSuper 是指super对象，可是为什么会选择collection呢，for循环出来他们实际上指的是collection对象表示的，即类似于Collection    col = new  HashSet<>();这样传入方法getType（）中的参数就是col，左边是静态类型，右边是实际类型。由于重载实际上是使用静态分派的，重载时是通过参数的静态类型而不是实际类型作为判定依据的。详细参考深入理解java虚拟机248页解释。
+
+spring默认使用jdk动态代理，那么下面哪个配置是开启强制使用cglib代理
+<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+java中下面哪些是Object类的方法（）
+notify()
+notifyAll()
+wait()
+在根类Object中包含以下方法： 
+    clone();
+    equals();
+    finalize();
+    getClass();[align=left][/align]
+    notify(),notifyAll();
+    hashCode();
+    toString();
+    wait(); 
+
+在Java中，关于HashMap类的描述，以下正确的是 ()
+HashMap使用键/值得形式保存数据
+HashMap允许将null用作键
+HashMap允许将null用作值
+
+HashMap是无序的，HashTable才是有序的
+
+Java创建对象的说法正确的有（）
+用new语句创建对象，是最常见的创建对象的方法。
+运用反射手段,调用java.lang.Class或者java.lang.reflect.Constructor类的newInstance()实例方法。
+调用对象的clone()方法。
+运用反序列化手段，调用java.io.ObjectInputStream对象的 readObject()方法。
+
+下面有关java threadlocal说法正确的有？
+ThreadLocal存放的值是线程封闭，线程间互斥的，主要用于线程内共享一些数据，避免通过参数来传递
+从线程的角度看，每个线程都保持一个对其线程局部变量副本的隐式引用，只要线程是活动的并且 ThreadLocal 实例是可访问的；在线程消失之后，其线程局部实例的所有副本都会被垃圾回收
+在Thread类中有一个Map，用于存储每一个线程的变量的副本
+对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式
+
+下面有关forward和redirect的描述，正确的是() ？
+执行forward时，浏览器不知道服务器发送的内容是从何处来，浏览器地址栏中还是原来的地址
+执行redirect时，服务器端告诉浏览器重新去请求地址
+forward是内部重定向，redirect是外部重定向
+
+从网上找了下，觉得解答的很好
+1.从地址栏显示来说 
+forward是服务器请求资源,服务器直接访问目标地址的URL,把那个URL的响应内容读取过来,然后把这些内容再发给浏览器.浏览器根本不知道服务器发送的内容从哪里来的,所以它的地址栏还是原来的地址.
+redirect是服务端根据逻辑,发送一个状态码,告诉浏览器重新去请求那个地址.所以地址栏显示的是新的URL.
+2.从数据共享来说 
+forward:转发页面和转发到的页面可以共享request里面的数据.
+redirect:不能共享数据.
+3.从运用地方来说 
+forward:一般用于用户登陆的时候,根据角色转发到相应的模块.
+redirect:一般用于用户注销登陆时返回主页面和跳转到其它的网站等.
+4.从效率来说 
+forward:高.
+redirect:低.
+本质区别
+一句话，转发是服务器行为，重定向是客户端行为。
+
+以下各类中哪几个是线程安全的？( )
+Vector
+Hashtable
+Stack
+
+对 Map 的用法，正确的有： 
+new java.util.HashMap().put( null , null ) ;
+new java.util.TreeMap().put( 0 , null ) ;
+
+Map属于接口类型，不可以new的方式创建对象
+

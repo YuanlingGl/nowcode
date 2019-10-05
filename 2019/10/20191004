@@ -72,3 +72,90 @@ String str = new String(“abc”)，“abc”在内存中是怎么分配的？
 一个文件中只能有一个public class。
 若类中只含一个main方法，则必须是public的。
 //???内部类?
+
+//要开始加量了
+
+以下不是修饰符final的作用的是( )。
+修饰不可变类
+
+class A {
+    public A() {
+        System.out.println("class A");
+    }
+    { System.out.println("I'm A class"); }
+    static { System.out.println("class A static"); }
+}
+public class B extends A {
+    public B() {
+        System.out.println("class B");
+    }
+    { System.out.println("I'm B class"); }
+    static { System.out.println("class B static"); }
+     
+    public static void main(String[] args) {
+ new B();
+ }
+}
+
+class A static 
+ class B static 
+ I'm A class 
+ class A
+ I'm B class 
+ class B
+ 
+ 
+
+此题考虑 Java 中构造器、初始化块、静态初始化块的执行顺序。
+
+    静态初始化块 > 初始化块 > 构造器
+    父类 > 子类 
+
+综合下来顺序就是：
+
+    父类静态初始化块
+    子类静态初始化块
+    父类初始化块
+    父类构造器
+    子类初始化块
+    子类构造器 
+
+需要注意静态初始化块是在类第一次加载的时候就会进行初始化。
+
+String s = new String("xyz");创建了几个StringObject？
+两个或一个都有可能
+(看常量池里存不存在xyz)
+
+下面程序段的时间复杂度是（）
+i = k = 0;
+while( k < n ){
+   i ++ ;
+k += i ;
+}
+
+O(n^1/2)
+
+以下哪个I / O类可以附加或更新文件
+RandomAccessFile()
+
+ RandomAccessFile 可以通过 seek(long pos) 方法去移动文件指针进行追加更新写入.
+OutputStream() 是一个抽象类 不能直接实例化去写入
+DataOutputStream() 也无法追加写入 
+
+Java对象的初始化方式有（ ）
+初始化块
+构造器
+定义变量时指定初始化值
+
+对象的初始化方式：
+1.new时初始化 ；
+2.静态工厂 newInstance；
+3.反射Class.forName()；
+4.clone方式；
+5.反序列化；
+
+以下表达式中，正确的是（）
+long i=0xfffL
+double i=0.9239d
+
+byte -127 - 127
