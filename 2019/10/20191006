@@ -1,0 +1,62 @@
+        List<String> aa = new ArrayList<String>();
+        aa.add("F1");
+        aa.add("F2");
+        aa.add("F3");
+        for (String temp : aa) {
+            if ("F3".equals(temp)) {
+                aa.remove(temp);
+            }
+        }
+         
+        for (String temp : aa){
+             System.out.println(temp);
+        }
+
+抛异常
+
+1.普通for循环：可以删除
+        注意每次删除之后索引要--
+2.Iterator遍历：可以删除
+        不过要使用Iterator类中的remove方法，如果用List中的remove方法会报错
+3.增强for循环foreach：不能删除
+        强制用List中的remove方法会报错
+		
+Object obj=new Object();
+        List aList=new ArrayList();
+        List bList=new LinkedList();
+         
+        long t1=System.currentTimeMillis();
+        for(int i=0;i<50000;i++){
+            aList.add(0,obj);
+        }
+        long t2=System.currentTimeMillis()-t1;
+         
+        t1=System.currentTimeMillis();
+        for(int i=0;i<50000;i++){
+            bList.add(0,obj);
+        }
+        long t3=System.currentTimeMillis()-t1; 
+
+t2>t3
+
+ArrayList内部是动态数组实现，在增加空间时会复制全部数据到新的容量大一些的数组中。而LinkedList内部为双向链表，可以按需分配空间，扩展容量简单，因此LinkedList用时少。 
+
+关于ASCII码和ANSI码，以下说法不正确的是（）？ 
+ASCII码都是可打印字符
+
+经过强制类型转换以后，变量a，b的值分别为多少？	
+short a =128；
+byte b =(byte) a；
+
+128 - 128
+
+public interface Status {
+ /*INSERT CODE HERE*/  int MY_VALUE=10;
+ }
+
+final
+static
+public
+
+接口中字段的修饰符：public static final（默认不写）
+接口中方法的修饰符：public abstract（默认不写）
