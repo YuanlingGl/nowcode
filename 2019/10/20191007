@@ -1,0 +1,28 @@
+下列说法正确的是
+在类方法中调用本类的类方法可直接调用
+//我感觉是点歪了...
+ 请问以下代码运行结果是：
+try{xxx (抛了个异常)}
+catch{}
+finally{}
+
+try catch finally
+
+//没仔细看,抛了异常确实会进catch
+
+在开发中使用泛型取代非泛型的数据类型（比如用ArrayList<String>取代ArrayList），程序的运行时性能会变得更好。（） 
+错误
+
+泛型仅仅是java的语法糖，它不会影响java虚拟机生成的汇编代码，在编译阶段，虚拟机就会把泛型的类型擦除，还原成没有泛型的代码，顶多编译速度稍微慢一些，执行速度是完全没有什么区别的.
+
+以下描述正确的是（ ）？ 
+do-while循环可以写成while循环的格式
+do{A()}while(flag) = while(boolean i=true||flag) {A();i=false}
+//我佛了,switch也是循环
+
+HashMap和HashTable的描述，错误的是？
+通过contains方法可以判断一个对象是否存在于HashMap或者Hashtable中。
+
+HashMap无contains方法 
+
+//先摸了,集中精力搞一下spring
