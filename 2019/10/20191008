@@ -1,0 +1,64 @@
+select * into xxx from xxx where xxxxxxxx;
+把查询到的东西塞进一张表里
+
+以下 _____ 不是 Object 类的方法 
+hasNext()
+
+下面哪个Set类是排序的？
+TreeSet
+
+类的加载顺序。
+(1) 父类静态代码块(包括静态初始化块，静态属性，但不包括静态方法)
+(2) 子类静态代码块(包括静态初始化块，静态属性，但不包括静态方法 )
+(3) 父类非静态代码块( 包括非静态初始化块，非静态属性 )
+(4) 父类构造函数
+(5) 子类非静态代码块 ( 包括非静态初始化块，非静态属性 )
+(6) 子类构造函数 
+
+public class Base
+{
+    private String baseName = "base";
+    public Base()
+    {
+        callName();
+    }
+ 
+    public void callName()
+    {
+        System. out. println(baseName);
+    }
+ 
+    static class Sub extends Base
+    {
+        private String baseName = "sub";
+        public void callName()
+        {
+            System. out. println (baseName) ;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Base b = new Sub();
+    }
+}
+下面代码的输出是什么？ 
+null
+new Sub();在创造派生类的过程中首先创建基类对象，然后才能创建派生类。
+创建基类即默认调用Base()方法，在方法中调用callName()方法，由于派生类中存在此方法，则被调用的callName（）方法是派生类中的方法，此时派生类还未构造，所以变量baseName的值为null
+
+在创建派生类对象，构造函数的执行顺序（）
+基类构造函数，派生类对象成员构造函数，派生类本身的构造函数
+
+下面哪些可能是重载的基本条件（）（注意：是可能为重载的基本条件）
+参数的类型不同
+参数的顺序不同
+参数的个数不同
+
+重载的概念是：
+方法名称相同，参数个数、次序、类型不同
+因此重载对返回值没有要求，可以相同，也可以不同
+但是如果参数的个数、类型、次序都相同，方法名也相同，仅返回值不同，则无法构成重载
+
+java运行时内存分为“线程共享”和“线程私有”两部分，以下哪些属于“线程共享”部分
+方法区
+java堆
