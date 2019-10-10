@@ -1,0 +1,38 @@
+package Wangyi;
+class Base
+{
+    public void method()
+    {
+        System.out.println("Base");
+    } 
+}
+class Son extends Base
+{
+    public void method()
+    {
+        System.out.println("Son");
+    }
+     
+    public void methodB()
+    {
+        System.out.println("SonB");
+    }
+}
+public class Test01
+{
+    public static void main(String[] args)
+    {
+        Base base = new Son();
+        base.method();
+        base.methodB();
+    }
+}
+问这个程序的输出结果。	
+Base base = new Son();
+这句new 了一个派生类，赋值给基类，所以下面的操作编译器认为base对象就是Base类型的
+Base类中不存在methodB()方法，所以编译不通过
+
+下列哪些操作会使线程释放锁资源？
+wait()
+join()
+
