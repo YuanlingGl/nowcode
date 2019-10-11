@@ -1,0 +1,111 @@
+class Base {
+    Base() {
+    System.out.print("Base");
+    }
+}
+public class Alpha extends Base {
+    public static void main( String[] args ) {
+        new Alpha();
+        //调用父类无参的构造方法
+        new Base();
+    }
+}
+
+BaseBase
+
+在执行new Alpha()时，会先执行父类的构造方法，在执行相应的子类的构造方法，所以此处会打印Base，在执行new Base()时，会直接执行Base中无参构造器的代码，再输出Base，所以选B 
+
+假设num已经被创建为一个ArrayList对象，并且最初包含以下整数值：[0，0，4，2，5，0，3，0]。 执行下面的方法numQuest(),最终的输出结果是什么？
+private List<Integer> nums;
+ 
+//precondition: nums.size() > 0
+//nums contains Integer objects
+public void numQuest() {
+int k = 0;
+Integer zero = new Integer(0);
+while (k < nums.size()) {
+if (nums.get(k).equals(zero))
+nums.remove(k);
+k++;
+}
+}
+
+[0, 4, 2, 5, 3]
+
+ 在执行循环时碰到了0的对象,进行删除
+使数组减少一个数,List为 [0, 4, 2, 5, 0, 3, 0],
+但是下一次k=1,所以将在4的位置开始比较,跳过0
+而将在List索引为4的位置再次碰到0的对象,
+得到List为[0, 4, 2, 5, 3, 0],此时下一次的k=5,跳过了3
+然而LIst的索引为5的位置是0的对象,再进行删除.
+得到答案:[0, 4, 2, 5, 3]
+总结:由于remove()删除了List集合元素,导致集合产生变化,而索引未进行修正,导致跳过了一些元素.
+
+/*..................*/中可以嵌套//注释，也能嵌套/*..........*/注释。
+错误
+
+一个Java源程序文件中定义几个类和接口，则编译该文件后生成几个以.class为后缀的字节码文件。
+正确
+
+ 对于如下代码段
+class A{
+    public A foo(){return this;}
+}
+class B extends A{
+    public A foo(){
+        return this;
+    }
+}
+
+class C extends B
+{
+    _______
+
+}
+
+可以放入到横线位置，使程序正确编译运行，而且不产生错误的选项是（ ） 
+
+public A foo(B b){return b;}
+
+
+
+重写 要求两同两小一大原则， 方法名相同，参数类型相同，子类返回类型小于等于父类方法返回类型， 子类抛出异常小于等于父类方法抛出异常， 子类访问权限大于等于父类方法访问权限。［注意：这里的返回类型必须要在有继承关系的前提下比较］
+
+重载 方法名必须相同，参数类型必须不同，包括但不限于一项，参数数目，参数类型，参数顺序
+再来说说这道题 A B 都是方法名和参数相同，是重写，但是返回类型没与父类返回类型有继承关系，错误 D 返回一个类错误 c的参数类型与父类不同，所以不是重写，可以理解为广义上的重载访问权限小于父类，都会显示错误
+虽然题目没点明一定要重载或者重写，但是当你的方法名与参数类型与父类相同时，已经是重写了，这时候如果返回类型或者异常类型比父类大，或者访问权限比父类小都会编译错误
+
+下面这段程序的输出结果是（）
+	
+public class Main {
+    public static void main(String[] args) {
+        split(12);
+    }
+    public static int split(int number) {
+        if (number > 1) {
+            if (number % 2 != 0) System.out.print(split((number + 1) / 2));
+                System.out.print(split(number / 2));
+            }
+        return number;
+       }
+}
+
+12136
+
+根据下面的代码，
+String s = null;
+会抛出NullPointerException异常的有（）。
+if( (s!=null) & (s.length()>0) )
+
+ 在 hibernate 开发中，关于 POJO 类对象的状态说法正确的是（）。 
+ 
+ 
+
+自由状态（Transient）：实体在内存中自由存在，与数据库中的记录无关
+
+持久状态（Persistent）：实体处于由Hibernate框架所管理的状态，对应了数据库中的一条记录，同时与某个session实例发生了关联
+
+游离状态（Detached）：在session 关闭之后,可以使对象从持久状态转换到游离状态。
+
+
+ 
