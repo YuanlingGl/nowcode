@@ -1,0 +1,98 @@
+下列选项中符合Java命名规则的标识符是（）
+_123
+
+const和goto是保留字 
+
+下列哪一种叙述是正确的（）
+声明抽象方法不可写出大括号
+
+以下代码段执行后的输出结果为
+public class Test {
+public static void main(String args[]) {
+int x = -5;
+int y = -12;
+System.out.println(y % x);
+}
+}
+
+-2
+
+取模运算，余数的符号跟被除数符号相同
+
+当使包含 applet 程序的页面最小化时，以下选项中的哪个方法将被执行？（ ） 
+stop()
+
+ 下面的程序 编译运行后，在屏幕上显示的结果是（）
+
+public class test {
+
+public static void main(String args[]) {
+
+int x,y;
+
+x=5>>2;
+
+y=x>>>2;
+System.out.println(y);
+}
+} 
+
+0
+
+5的二进制是0101。
+
+x=5>>2 （>>带符号右移）
+将0101右移2位，为：0001。
+
+y=x>>>2 （>>>无符号右移，左边空缺补充为0）
+
+将0001右移2位，补0。结果为：0000。
+
+所以得出答案0 
+
+public class Demo{
+　public static void main(String args[]){
+　　　int num = 10;
+　　　System.out.println(test(num));
+}
+public static int test(int b){
+　　　try
+　　　{
+　　　　b += 10;
+　　　　return b;
+　　　}
+　　　catch(RuntimeException e)
+　　　{
+　　　}
+　　　catch(Exception e2)
+　　　{
+　　　}
+　　　finally
+　　　{
+　　　　b += 10;
+　　　　return b;
+　　　}
+　　}
+}
+
+30
+
+如果finally块中有return语句的话，它将覆盖掉函数中其他return语句。
+
+下面的switch语句中，x可以是哪些类型的数据：()
+switch(x)
+{
+default:
+System.out.println("Hello");
+}
+
+char
+byte
+
+关于Java内存区域下列说法不正确的有哪些
+
+
+Java虚拟机栈描述的是java方法执行的内存模型，每个方法被执行的时候都会创建一个栈帧，用于存储局部变量表、类信息、动态链接等信息
+
+Java堆是java虚拟机所管理的内存中最大的一块，每个线程都拥有一块内存区域，所有的对象实例以及数组都在这里分配内存。
+
