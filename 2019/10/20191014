@@ -1,0 +1,84 @@
+java 语言使用的字符码集是 
+Unicode
+
+现有如下代码段：
+   x = 2;
+   while(x<n/2) 
+          x = 2*x;
+假设n>=0，则其时间复杂度应为（   ）
+O(log2(n))
+
+假定Base b = new Derived（）; 调用执行b.methodOne（）后，输出结果是什么？
+public class Base
+{
+public void methodOne()
+{
+System.out.print("A");
+methodTwo();
+}
+ 
+public void methodTwo()
+{
+System.out.print("B");
+}
+}
+ 
+public class Derived extends Base
+{
+public void methodOne()
+{
+super.methodOne();
+System.out.print("C");
+}
+ 
+public void methodTwo()
+{
+super.methodTwo();
+System.out.print("D");
+}
+}
+ABDC
+
+以下集合对象中哪几个是线程安全的（）
+Vector
+Hashtable
+
+有以下程序段， 则下面正确的选项是（）
+public class MyThead extends Thread{
+    public static void main(String[] args) {
+        MyThead t=new MyThead();
+        MyThead s=new MyThead();
+        t.start();
+        System.out.println("one.");
+        s.start();
+        System.out.println("two.");
+    }
+    public void run() {
+        System.out.println("Thread");
+    }
+}
+程序运行可能结果为：
+one.
+Thread
+two.
+Thread
+程序运行可能结果是：
+one.
+two.
+Thread
+Thread
+程序运行结果不稳定
+
+在JAVA中，下列哪些是Object类的方法（）
+wait()
+notify()
+notifyAll()
+
+下面哪些类可以被继承？ Java.lang.Thread、java.lang.Number、java.lang.Double、java.lang.Math、 java.lang.ClassLoader
+Thread
+Number
+ClassLoader
+
+以下哪种JAVA得变量声明方式可以避免程序在多线程竞争情况下读到不正确的值(  )
+volatile
+static volatile
