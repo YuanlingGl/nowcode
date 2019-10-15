@@ -1,0 +1,48 @@
+下列不正确的 Java 语言标识符是（ ） 
+for
+
+Java标识符命名规范是：
+1）只能包含字母a-zA-Z，数字0-9，下划线_和美元符号$；
+2）首字母不能为数字；
+3）关键字和保留字不能作为标识符。
+null是关键字，NULL不是关键字，java区分大小写。这题答案D是对的，但C是错的，for是关键字。
+
+Java数据库连接库JDBC用到哪种设计模式?
+桥接模式
+
+下面的程序将来打印什么?（）
+public class TestIncr {
+    public static void main(String args[]) {
+        int i = 0;
+        i = i++ + i;
+        System.out.println("I =" +i);
+    }
+}
+I = 1
+
+i++ 经过之后再加
+
+下列函数定义中，有语法错误的是（）
+void fun(int x, int y){*x = *y;}
+
+关于身份证号，以下正确的正则表达式为（      ）
+isIDCard=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+isIDCard=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/;
+
+^：起始符号，^x表示以x开头
+$：结束符号，x$表示以x结尾
+[n-m]：表示从n到m的数字
+\d：表示数字，等同于[0-9]
+X{m}：表示由m个X字符构成，\d{4}表示4位数字
+
+下列方法中哪个是线程执行的方法？ （）
+run（）
+
+start是启动线程对象，使之从新建状态转入就绪状态；sleep让线程睡眠一段时间，在此期间线程不消耗CPU资源；suspend使线程挂起，暂停执行， 如果想恢复线程，必须由其他线程调用 resume方法。
+
+有关hashMap跟hashTable的区别，说法正确的是？
+HashMap和Hashtable都实现了Map接口
+HashMap是非synchronized，而Hashtable是synchronized
+HashTable使用Enumeration，HashMap使用Iterator
+HashMap允许将 null 作为一个 entry 的 key 或者 value，而 Hashtable 不允许。
+
