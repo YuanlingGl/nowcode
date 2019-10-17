@@ -1,0 +1,21 @@
+下面关于垃圾收集的说法正确的是
+个对象成为垃圾是因为不再有引用指着它，但是线程并非如此
+
+关于下面的程序Test.java说法正确的是(    )。
+public class Test {
+    static String x="1";
+    static int y=1;
+    public static void main(String args[]) {
+        static int z=2;
+        System.out.println(x+y+z);
+    }
+}
+程序有编译错误
+被static修饰的变量称为静态变量，静态变量属于整个类，而局部变量属于方法，只在该方法内有效，所以static不能修饰局部变量
+
+
+count = count ++;这个先将count这个值0暂存起来，然后count自加1变成1，最后将暂存的值赋值给count，count最终的值为0 
+
+下列流当中，属于处理流的是：（）  
+DatalnputStream
+BufferedlnputStream
