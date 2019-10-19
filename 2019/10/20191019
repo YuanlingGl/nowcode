@@ -1,0 +1,21 @@
+Java是从（）语言改进重新设计
+C++
+
+下列说法正确的有（）
+能被java.exe成功运行的java class文件必须有main()方法
+
+下列说法正确的是( ) 
+volatile能保证数据的可见性，但不能完全保证数据的原子性，synchronized即保证了数据的可见性也保证了原子性
+
+关于匿名内部类叙述正确的是？ ( )
+匿名内部类不可以定义构造器
+
+下列选项中属于面向对象程序设计语言特征的是（）
+继承性
+多态性
+封装性
+
+关于OutOfMemoryError，下面说法正确的是（）？ 
+java.lang.OutOfMemoryError: PermGen space 增加-XX:MaxPermSize这个参数的值的话，这个问题通常会得到解决。
+java.lang.OutOfMemoryError: Requested array size exceeds VM limit当你正准备创建一个超过虚拟机允许的大小的数组时，这条错误将会出现
+java.lang.OutOfMemoryError: Java heap space 一般情况下解决这个问题最快的方法就是通过-Xmx参数来增加堆的大小
