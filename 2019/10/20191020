@@ -1,0 +1,55 @@
+给定以下JAVA代码，这段代码运行后输出的结果是（）
+	
+public class Test
+{
+    public static int aMethod(int i)throws Exception
+    {
+        try{
+            return i / 10;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("exception in a Method");
+        } finally{
+            System.out.printf("finally");
+        }
+    }
+ 
+    public static void main(String [] args)
+    {
+        try
+        {
+            aMethod(0);
+        }
+        catch (Exception ex)
+        {
+            System.out.printf("exception in main");
+        }
+        System.out.printf("finished");
+    }
+}
+    
+finally finished
+//读题
+
+java语言的下面几种数组复制方法中，哪个效率最高？
+System.arraycopy
+
+以下哪几个是java中的集合类型？
+Vector
+Set
+List
+
+关于OutOfMemoryError，下面说法正确的是（）？ 
+java.lang.OutOfMemoryError: PermGen space 增加-XX:MaxPermSize这个参数的值的话，这个问题通常会得到解决。
+java.lang.OutOfMemoryError: Requested array size exceeds VM limit当你正准备创建一个超过虚拟机允许的大小的数组时，这条错误将会出现
+java.lang.OutOfMemoryError: Java heap space 一般情况下解决这个问题最快的方法就是通过-Xmx参数来增加堆的大小
+
+关于java中的数组，下面的一些描述，哪些描述是准确的：（）
+数组是一个对象，不同类型的数组具有不同的类
+数组是一个连续的存储结构
+可以二维数组，且可以有多维数组，都是在java中合法的。
+
+关于ThreadLocal类 以下说法正确的是
+ThreadLocal是采用哈希表的方式来为每个线程都提供一个变量的副本
+ThreadLocal保证各个线程间数据安全，每个线程的数据不会被另外线程访问和破坏
