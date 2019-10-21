@@ -1,0 +1,39 @@
+针对下面的代码块,哪个equal为true:（）
+String s1 = "xiaopeng" ;
+String s2 = "xiaopeng" ;
+String s3 =new String (s);
+
+s1 == s2
+string是final修饰的，会将创建的变量放入字符串常量池，当再创建同样的字符串时，发现常量池中有则直接使用 
+
+下面关于Java package的描述，哪个是正确的:（）
+I. 包不提供将所有类名分区为更易管理的块的机制.
+II. 包提供可见性控制机制.
+III. 包的一个重要属性是包内定义的所有类都可以通过该包外的代码访问.
+IV. 声明为包的一部分的类的.class文件可以存储在多个目录中.
+
+只有II
+
+What will happen when you attempt to compile and run the following code?
+public class Test{
+static{
+   int x=5;
+}
+static int x,y;
+public static void main(String args[]){
+   x--;
+   myMethod( );
+   System.out.println(x+y+ ++x);
+}
+public static void myMethod( ){
+  y=x++ + ++x;
+ }
+}
+
+prints:3
+
+下面哪个语句是创建数组的正确语句？( )
+float f[][] = new float[6][6];
+float []f[] = new float[6][6];
+float [][]f = new float[6][6];
+float [][]f = new float[6][];
