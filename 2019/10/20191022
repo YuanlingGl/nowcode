@@ -1,0 +1,18 @@
+java 的字符类型采用的是 Unicode 编码方案，每个 Unicode 码占用（）个比特位。 
+16
+
+下列关于final、finally、finalize说法正确的是（ ）
+final可以用来修饰类、方法、变量
+finally是java保证重点代码一定要被执行的一种机制
+finalize设计的目的是保证对象在被垃圾收集前完成特定资源的回收
+
+下列容器中，哪些容器按 key 查找的复杂度为 O(log(n)) （）
+std::multimap
+std::map
+
+0
+
+下列哪个选项是错误的。（） 
+一个文件中只能有一个public class。
+若类中只含一个main方法，则必须是public的。
+//内部类也可以有public class。
