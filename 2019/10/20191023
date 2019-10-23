@@ -1,0 +1,30 @@
+命令javac-d参数的用途是？（）
+指定编译后类层次的根目录
+
+下面哪些不是Thread类的方法
+exit()
+
+用命令方式运行以下代码的运行结果是（）
+public class f{
+    public static void main(String[] args){
+        String foo1 = args[1];
+        String foo2 = args[2];
+        String foo3 = args[3];
+    }
+}
+命令:  java f a b c 
+
+程序运行错误
+
+运行java命令,没有T11对应的类,会报找不到或者无法加载主类。
+
+Java是一门支持反射的语言,基于反射为Java提供了丰富的动态性支持，下面关于Java反射的描述，哪些是错误的：(          )
+Java反射主要涉及的类如Class, Method, Filed,等，他们都在java.lang.reflet包下
+Java反射机制提供了字节码修改的技术，可以动态的修剪一个类
+Java反射机制一般会带来效率问题，效率问题主要发生在查找类的方法和字段对象，因此通过缓存需要反射类的字段和方法就能达到与之间调用类的方法和访问类的字段一样的效率
+
+下面关于volatile的功能说法正确的是哪个
+有序性
+可见性
+
+
