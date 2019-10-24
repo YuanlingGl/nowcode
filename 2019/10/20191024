@@ -1,0 +1,65 @@
+为AB类的一个无形式参数无返回值的方法method书写方法头，使得使用类名AB作为前缀就可以调用它，该方法头的形式为(      )。
+static  void  method( )
+只有静态方法才能被类名调用。
+
+java Thread中，run方法和start方法的区别，下面说法错误的是？
+他们都可以实现了多线程运行。
+错误的
+
+已知有下列Test类的说明，在该类的main方法内，则下列哪个语句是正确的？（）
+public class Test
+{
+private float f = 1.0f;
+int m = 12;
+static int n = 1;
+public static void main (String args[])
+{
+Test t = new Test();
+}
+} 
+t.f;
+
+this不能在static的方法中使用~
+
+如果要建立一个java.scut.computer的包，叙述正确的是？  ( )
+只需在代码中加入“package java.scut.computer;”一个语句，并且必须放在代码的第一行
+
+有以下一段代码，请选择其运行结果。( )
+public class Spike
+{
+    public static void main(String[] args)
+    {
+        Counter a = new Counter();
+        System.out.println(a.increment());
+        System.out.println(a.anotherIncrement());
+        Counter b = new Counter();
+        System.out.println(b.increment());
+    }
+}
+class Counter
+{
+    private static int count = 0;
+    public int increment()
+    {
+        return count++;
+    }
+    public int anotherIncrement()
+    {
+        return ++count;
+    }
+}
+
+0 2 2
+
+下面哪一项不属于优化Hibernate所鼓励的？
+使用单向一对多关联，不使用双向一对多
+
+以下说法中正确的有？
+StringBuilder是 线程不安全的
+volatile关键字不保证对变量操作的原子性
+
+Java是一门支持反射的语言,基于反射为Java提供了丰富的动态性支持，下面关于Java反射的描述，哪些是错误的：(    )
+
+Java反射主要涉及的类如Class, Method, Filed,等，他们都在java.lang.reflet包下
+Java反射机制提供了字节码修改的技术，可以动态的修剪一个类
+Java反射机制一般会带来效率问题，效率问题主要发生在查找类的方法和字段对象，因此通过缓存需要反射类的字段和方法就能达到与之间调用类的方法和访问类的字段一样的效率
