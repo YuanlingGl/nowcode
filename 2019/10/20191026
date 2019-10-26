@@ -1,0 +1,45 @@
+下列类定义中哪些是合法的抽象类的定义？（）
+abstract class Animal{abstract  void growl();}
+
+下面有关List接口、Set接口和Map接口的描述，错误的是？
+他们都继承自Collection接口
+//List接口和Set接口都继承自Collection接口，Collection接口继承Iterable接口
+
+String str =
+"";
+System.out.print(str.split(",").length);
+输出结果为：
+
+1
+
+下面赋值语句中正确的是（）
+double d=5.3e12;
+
+在Java中，如果你输入一个小数，系统默认的是double类型的，这个式子相当于 float f=double 11.1，明显错误，如果想要表达11.1为float类型的，需要在11.1末尾加一个f标识你输入的是float类型即可 
+
+以下 b 的值是： byte b = (byte)129; 
+-127
+
+
+
+假设 a 是一个由线程 1 和线程 2 共享的初始值为 0 的全局变量，则线程 1 和线程 2 同时执行下面的代码，最终 a 的结果不可能是（）
+
+boolean isOdd = false;
+
+for(int i=1;i<=2;++i)
+{
+if（i%2==1）isOdd = true；
+else isOdd = false；
+a+=i*(isOdd?1:-1)；
+} 
+
+1
+
+下面有关java的instanceof、?、&、&&说法正确的有？
+
+
+
+instanceof 可用来判断某个实例变量是否属于某种类的类型。
+"?："  三目运算符
+&在逻辑运算中是非短路逻辑与，在位运算中是按位与
+&& 逻辑运算：逻辑与
