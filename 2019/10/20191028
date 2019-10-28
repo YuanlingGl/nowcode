@@ -1,0 +1,26 @@
+以下是java concurrent包下的4个类，选出差别最大的一个
+Semaphore
+ReentrantLock
+Future
+CountDownLatch
+
+Future
+
+命令javac-d参数的用途是？（）
+指定编译后类层次的根目录
+
+以下哪个I / O类可以附加或更新文件
+RandomAccessFile()
+
+以下哪些继承自 Collection 接口（） 
+Set
+List
+
+JavaWEB中有一个类，当会话种邦定了属性或者删除了属性时，他会得到通知，这个类是：(    )
+
+HttpSessionAttributeListener
+
+关于ThreadLocal类 以下说法正确的是
+
+ThreadLocal是采用哈希表的方式来为每个线程都提供一个变量的副本
+ThreadLocal保证各个线程间数据安全，每个线程的数据不会被另外线程访问和破坏
