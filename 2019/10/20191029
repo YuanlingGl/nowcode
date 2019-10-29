@@ -1,0 +1,53 @@
+JDK中提供的java、javac、jar等开发工具也是用Java编写的。
+对
+
+ A 是抽象父类或接口， B ， C 派生自 A ，或实现 A ，现在 Java 源代码中有如下声明：
+
+1. A  a0=new  A();
+
+2. A  a1 =new  B();
+
+3. A  a2=new  C();
+
+问以下哪个说法是正确的？（ ） 
+
+第1行不能通过编译
+
+以下程序的执行结果是：
+static boolean foo(char c)
+ {
+ System.out.print(c);
+ return true;
+ }
+ public static void main(String[] args) {
+ int i =0;
+ for(foo('A');foo('B')&&(i<2);foo('C'))
+ {
+ i++;
+ foo('D');
+ }
+ }
+ 
+ABDCBDCB
+
+下面哪些类实现或继承了 Collection 接口？
+ArrayList
+Vector
+
+程序中常采用变量表示数据，变量具有名、地址、值、作用域、生存期等属性。关于变量的叙述，（）是正确的。
+
+根据作用域规则，在函数中定义的变量只能在函数中引用
+在函数中定义的变量不能与其所在函数的形参同名
+在函数中定义的变量，其存储单元在内存的栈区
+
+以下可以正确获取结果集的有
+Statement sta=con.createStatement();<br>ResultSet rst=sta.executeQuery(“select * from book”);
+PreparedStatement pst=con.prepareStatement(“select * from book”);
+ResultSet rst=pst.executeQuery();
+
+
+关于Java中的ClassLoader下面的哪些描述是错误的：(    )
+
+一般的情况不同ClassLoader装载的类是不相同的，但接口类例外，对于同一接口所有类装载器装载所获得的类是相同的
+ClassLoader的loadClass在装载一个类时，如果该类不存在它将返回null
+所有ClassLoader装载的类都来自CLASSPATH环境指定的路径
